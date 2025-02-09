@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     &::-webkit-scrollbar {
         display: none;
@@ -12,6 +11,9 @@
 body {
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 a {
@@ -442,9 +444,35 @@ ul {
             margin: 10px 0;
         }
 
-        & p {
-            font-size: 1em;
-            margin: 5px 0;
+        .text {
+            display: flex;
+            flex-direction: column;
+            text-wrap: balance;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 10px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                display: block !important;
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: orange;
+                border-radius: 5px;
+            }
+
+            & p {
+                font-size: 1em;
+                margin: 10px 5px 0 5px;
+                border-bottom: 1px solid #ccc;
+            }
         }
 
     }
