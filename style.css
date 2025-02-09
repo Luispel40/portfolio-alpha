@@ -86,7 +86,6 @@ a {
             background-position: 0;
         }
 
-
     }
 
 
@@ -104,7 +103,7 @@ a {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-image: url("/img/capa-alpha.png");
+    background-image: url("http://designerluiscoms.com/wp-content/uploads/2025/02/capa-alpha.webp");
     background-repeat: none;
     background-size: cover;
     background-position: center;
@@ -135,7 +134,7 @@ a {
 
         & button {
             all: unset;
-            background-image: linear-gradient(to bottom, orange,rgb(155, 104, 8));
+            background-image: linear-gradient(to bottom, orange, rgb(155, 104, 8));
             padding: 20px 100px;
             border-radius: 2px;
             margin-top: 20px;
@@ -191,6 +190,7 @@ a {
             animation: 20s infiniteScroll infinite linear;
             transition: .5s;
         }
+
         & li:hover> :not(:hover) {
             scale: 0.9;
         }
@@ -334,7 +334,7 @@ ul {
                 padding: 10px 30px;
                 border-radius: 6px;
                 position: relative;
-                top: 100px;
+                top: -100px;
                 box-shadow: 0 2px 3px #00000060;
                 transition: 0.5s;
             }
@@ -357,10 +357,6 @@ ul {
 
             }
 
-            &.container:hover img {
-                transform: scale(1.18) rotate(5deg) translateY(25px);
-                pointer-events: none;
-            }
 
             & img::before {
                 content: '';
@@ -376,17 +372,7 @@ ul {
 
         }
 
-        & .container:hover {
-            scale: 1;
-            filter: opacity(1);
-        }
 
-
-
-
-        & .container:hover .button {
-            top: -100px;
-        }
 
     }
 
@@ -507,71 +493,6 @@ ul {
     background-color: rgb(207, 143, 24);
 }
 
-dialog {
-    border: 1px solid #ccc;
-    width: 414px;
-    height: 896px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #00000060;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -200dvh;
-    opacity: 0;
-    margin: auto;
-    backdrop-filter: blur(10px);
-    scale: 80%;
-    overflow: visible;
-    transition: 1s ease-in-out;
-
-    & .close {
-        all: unset;
-        position: absolute;
-        top: -10px;
-        right: -10px;
-        font-size: 1.5em;
-        cursor: pointer;
-        background: red;
-        color: #fff;
-        padding: 10px;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        transition: .5s;
-    }
-
-    & .close:hover {
-        scale: 1.1;
-    }
-
-    & .modal_content {
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-
-        & iframe {
-            width: 100%;
-            height: 100%;
-
-            ::-webkit-scrollbar {
-                display: none;
-            }
-        }
-
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    }
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-}
 
 .contact#contact {
     margin-top: 20px;
@@ -731,7 +652,7 @@ footer {
     .header {
         width: 100%;
         height: 100vh;
-        background-image: url("http://designerluiscoms.com/wp-content/uploads/2024/12/portfoliocover-mobile.webp");
+        background-image: url("http://designerluiscoms.com/wp-content/uploads/2025/02/portfoliocover-mobile-1.webp");
         background-repeat: none;
         background-size: cover;
         background-position: center;
@@ -954,7 +875,7 @@ footer {
 
     .apps {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         background-image: linear-gradient(to bottom, transparent, #3c94c7, transparent);
         background-repeat: none;
         background-size: cover;
@@ -978,18 +899,6 @@ footer {
                 width: 100%;
             }
         }
-    }
-
-    #modal {
-        width: 400px;
-        height: 100vh;
-        background-image: linear-gradient(to bottom, transparent, #3c94c7, transparent);
-        background-repeat: none;
-        background-size: cover;
-        background-position: center;
-        padding: 0 8% !important;
-        flex-direction: column;
-        overflow: hidden;
     }
 
     .section#contact {

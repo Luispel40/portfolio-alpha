@@ -1,5 +1,5 @@
 
-    const infiniteScroll = document.querySelector(".infinite-scroll");
+const infiniteScroll = document.querySelector(".infinite-scroll");
 const infiniteScrollItems = infiniteScroll.querySelectorAll(
   ".infinite-scroll li"
 );
@@ -33,32 +33,8 @@ const leftButton = document.querySelector(".left");
 const rightButton = document.querySelector(".right");
 let cards = document.querySelectorAll(".card_carousel");
 
-const appButtons = document.querySelectorAll(".appButton");
-const modal = document.getElementById("modal");
 
 let primaryPosition = (carousel.scrollLeft += 600);
-
-const openModal = ({ target }) => {
-  modal.showModal();
-  let link = target.getAttribute("link");
-  modal.querySelector("iframe").src = link;
-  modal.style.bottom = 0;
-  modal.style.opacity = 1;
-};
-
-const closeModal = () => {
-  modal.style.bottom = "-200dvh";
-  modal.style.opacity = 0;
-
-  setTimeout(() => {
-    modal.close();
-  }, 500);
-};
-
-appButtons.forEach((appButton) => {
-  appButton.addEventListener("click", openModal);
-  console.log(appButton.outerHTML.link);
-});
 
 function handleLeftMove() {
   const SCROLL_AMOUNT = 300;
